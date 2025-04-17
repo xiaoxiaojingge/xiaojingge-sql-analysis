@@ -1,0 +1,23 @@
+# 端口
+server:
+  port: 18888
+
+mybatis-plus:
+  global-config:
+    # MybatisPlus调用原生SQL
+    enable-sql-runner: true
+  configuration:
+    # 关闭二级缓存
+    cache-enabled: false
+
+sql:
+  slow:
+    analysisSwitch: true # 是否开启 SQL 分析
+#    onlyCheckOnce: true  # 是否只分析一次（是否对一个sqlID只分析一次）
+#    checkInterval: 300000  # 分析间隔 只有 onlyCheckOnce 为 false 的时候才有效
+#    exceptSqlIds: com.example.mapper.TaskMapper.selectList,com.example.mapper.TaskMapper.xxx # 不需要分析的 sqlID（需要过滤不分析的sqlID）
+#    sqlType: SELECT,UPDATE # 拦截的 SQL 类型
+#    outModel: LOG # 日志模型 默认就是系统的 log 打印
+#    scoreRuleLoadClass: com.example.rule.MySqlScoreRuleLoadService # 评分规则加载器，用于扩展自定义规则
+#    outputClass: com.example.out.MySqlScoreResultOutService # 要自定义输出的时候再打开（评分结果输出类，用于扩展自定义结果输出方式）
+#    sqlReplaceModelSwitch: false # sql替换模块是否开启
