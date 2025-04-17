@@ -10,6 +10,7 @@ mybatis-plus:
     # 关闭二级缓存
     cache-enabled: false
 
+# 京东 sql-analysis
 sql:
   slow:
     analysisSwitch: true # 是否开启 SQL 分析
@@ -21,3 +22,10 @@ sql:
 #    scoreRuleLoadClass: com.example.rule.MySqlScoreRuleLoadService # 评分规则加载器，用于扩展自定义规则
 #    outputClass: com.example.out.MySqlScoreResultOutService # 要自定义输出的时候再打开（评分结果输出类，用于扩展自定义结果输出方式）
 #    sqlReplaceModelSwitch: false # sql替换模块是否开启
+
+# 小米 soar
+soar:
+  web:
+    port: 18889
+    build:
+      timeout: 300  # 构建超时时间（秒）

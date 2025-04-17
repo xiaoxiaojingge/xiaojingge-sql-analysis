@@ -413,7 +413,36 @@ const SqlAnalysis: React.FC = () => {
     <div className={styles.container}>
       <Card>
         <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 16 }}>
-          <Typography.Title level={4}>SQL分析工具</Typography.Title>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <Typography.Title level={4} style={{ margin: 0 }}>SQL分析工具</Typography.Title>
+            <Popover
+              content={
+                <div style={{ maxWidth: 300 }}>
+                  <Typography.Paragraph style={{ marginBottom: 8 }}>
+                    <WarningOutlined style={{ color: '#faad14', marginRight: 8 }} />
+                    <Text strong>安全提示</Text>
+                  </Typography.Paragraph>
+                  <Typography.Paragraph type="warning" style={{ marginBottom: 8 }}>
+                    为了确保数据安全，请注意以下事项：
+                  </Typography.Paragraph>
+                  <ul style={{ margin: 0, paddingLeft: 16 }}>
+                    <li><Text>请使用测试数据库进行SQL分析</Text></li>
+                    <li><Text>不要连接生产环境数据库</Text></li>
+                    <li><Text>避免在生产环境执行分析操作</Text></li>
+                    <li><Text>建议使用只读账号进行连接</Text></li>
+                    <li><Text>否则数据丢失，后果自负</Text></li>
+                  </ul>
+                </div>
+              }
+              title={null}
+              trigger="hover"
+              placement="rightTop"
+              overlayStyle={{ maxWidth: 350 }}
+              overlayInnerStyle={{ padding: '12px 16px' }}
+            >
+              <WarningOutlined style={{ color: '#faad14', fontSize: '16px', cursor: 'pointer' }} />
+            </Popover>
+          </div>
           <Button
             type="primary"
             icon={<DatabaseOutlined />}

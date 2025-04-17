@@ -15,7 +15,7 @@ export default [
         component: './SqlAnalysis',
       },
       {
-        path: '/sql-soar',
+        path: '/soar',
         name: '小米Soar',
         icon: 'CodeOutlined',
         component: './SqlSoar',
